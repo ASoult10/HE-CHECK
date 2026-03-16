@@ -16,11 +16,15 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2023-01-01' = {
     name: 'Standard_LRS'
   }
   kind: 'StorageV2'
+  properties: {
+    allowBlobPublicAccess: false
+  }
 }
 
 resource hostingPlan 'Microsoft.Web/serverfarms@2022-09-01' = {
   name: '${name}-plan'
   location: location
+  kind: 'linux'
   sku: {
     name: skuName
     tier: 'Dynamic'
