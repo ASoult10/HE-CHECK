@@ -1,8 +1,32 @@
 .info {
-    width: 80%;
-    background-color: var(--eu-yellow-color);
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.info-section {
+    width: 80%;
+    background: var(--eu-yellow-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.proposals-section {
+    width: 80%;
+    background: var(--white-color);
+    color: var(--black-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    padding: 20px;
+    border-radius: 8px;
 }

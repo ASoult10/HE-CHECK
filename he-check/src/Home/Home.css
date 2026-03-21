@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-.section-1 {
+.info-section {
     width: 80%;
     background: var(--eu-yellow-color);
     display: flex;
@@ -15,17 +15,7 @@
     align-items: center;
     margin-top: 40px;
     padding: 20px;
-}
-
-.section-2 {
-    width: 80%;
-    background: var(--eu-yellow-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    padding: 20px;
+    border-radius: 8px;
 }
 
 .steps {
@@ -37,17 +27,6 @@
     gap: 4px;
 }
 
-.section-3 {
-    width: 80%;
-    background: var(--eu-yellow-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    padding: 20px;
-}
-
 .tool {
     width: 80%;
     display: flex;
@@ -55,11 +34,41 @@
     justify-content: center;
     align-items: center;
     margin: 40px;
+    border-radius: 8px;
 }
 
-.input-box,
+.input-boxes {
+    width: 100%;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.input-box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.input-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    gap: 30px;
+}
+
 .output-box {
-    width: 50%;
+    width: 100%;
     height: auto;
     background: var(--white-color);
     color: var(--black-color);
@@ -70,14 +79,6 @@
     margin: 0 10px;
     padding: 20px;
     border-radius: 8px;
-}
-
-.input-buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
 }
 
 .home textarea {

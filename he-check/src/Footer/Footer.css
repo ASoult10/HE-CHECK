@@ -1,6 +1,6 @@
 .footer {
     width: 100%;
-    background: var(--white-color);
+    background: var(--eu-yellow-color);
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
