@@ -1,4 +1,4 @@
-.app-nav {
+.footer {
     width: 100%;
     background: var(--white-color);
     display: flex;
@@ -6,12 +6,11 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 12px 16px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    margin-top: auto;
+    position: static;
 }
 
-.app-nav .nav-logo {
+.footer .nav-logo {
     width: 40%;
     display: flex;
     flex-direction: row;
@@ -19,7 +18,7 @@
     align-items: center;
 }
 
-.app-nav .logo {
+.footer .logo {
     color: var(--eu-blue-color);
     text-decoration: none;
     display: flex;
@@ -29,11 +28,11 @@
     gap: 24px;
 }
 
-.app-nav .logo-img {
+.footer .logo-img {
     width: 80px;
 }
 
-.app-nav .nav-otherlinks {
+.footer .nav-otherlinks {
     width: 60%;
     display: flex;
     flex-direction: row;
@@ -42,13 +41,13 @@
     gap: 50px;
 }
 
-.app-nav .nav-link {
+.footer .nav-link {
     color: var(--eu-blue-color);
     text-decoration: none;
     padding: 2px 8px;
 }
 
-.app-nav .nav-link:hover {
+.footer .nav-link:hover {
     color: var(--black-color);
     background: var(--shadow-grey-color);
 }

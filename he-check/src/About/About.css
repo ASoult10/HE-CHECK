@@ -1,6 +1,6 @@
 .about {
-    background-color: var(--eu-yellow-color);
     width: 80%;
+    background-color: var(--eu-yellow-color);
     display: flex;
     flex-direction: column;
     justify-content: center;

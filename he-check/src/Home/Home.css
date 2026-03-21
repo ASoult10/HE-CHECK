@@ -1,8 +1,105 @@
 .home {
-    background-color: var(--eu-yellow-color);
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.section-1 {
+    width: 80%;
+    background: var(--eu-yellow-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.section-2 {
+    width: 80%;
+    background: var(--eu-yellow-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.steps {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.section-3 {
+    width: 80%;
+    background: var(--eu-yellow-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.tool {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+}
+
+.input-box,
+.output-box {
+    width: 50%;
+    height: auto;
+    background: var(--white-color);
+    color: var(--black-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.input-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.home textarea {
+    width: 100%;
+    min-height: 140px;
+    max-height: 60vh;
+    font: var(--plain-text);
+    margin: 10px 0;
+    padding: 10px;
+    resize: vertical;
+    overflow: hidden;
+}
+
+.home button {
+    background: var(--eu-blue-color);
+    color: var(--white-color);
+    padding: 10px 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+}
+
+.loading {
+    color: var(--eu-blue-color);
 }
