@@ -1,10 +1,10 @@
 import { NavLink } from 'react-router-dom'
-import './AppNav.css'
+import './Footer.css'
 import logo from '../assets/react.svg'
 
-export default function AppNav() {
+export default function Footer() {
     return (
-        <nav className="app-nav">
+        <nav className="footer">
             <div className="nav-logo">
                 <NavLink to="/" className="logo">
                     <img src={logo} alt="HE-CHECK logo" className="logo-img" />
@@ -12,9 +12,9 @@ export default function AppNav() {
                 </NavLink>
             </div>
             <div className="nav-otherlinks">
-                <NavLink to="/" className="nav-link"><h2>Home</h2></NavLink>
-                <NavLink to="/about" className="nav-link"><h2>About</h2></NavLink>
-                <NavLink to="/info" className="nav-link"><h2>Info</h2></NavLink>
+                <NavLink to="/" className="nav-link">Home</NavLink>
+                <NavLink to="/about" className="nav-link">About</NavLink>
+                <NavLink to="/info" className="nav-link">Info</NavLink>
             </div>
         </nav>
     )

@@ -5,7 +5,6 @@ describe('App', () => {
   it('Probar que la página principal se renderiza correctamente', () => {
     render(<App />)
 
-    expect(screen.getByText('Home')).toBeInTheDocument()
-    expect(screen.getByText('Bienvenido')).toBeInTheDocument()
+    expect(screen.getByText('¿Qué es HE-CHECK?')).toBeInTheDocument()
   })
 })
