@@ -8,18 +8,18 @@ Tu tarea consiste en evaluar una propuesta de proyecto según los criterios ofic
 A continuación, se te proporciona el texto del topic al que aplica la propuesta, junto con la información básica de la propuesta (resumen, objetivos, plan de trabajo, impacto y consorcio).
 
 Topic:
-[INTRODUCIR TOPIC]
+{{topic}}
 
 Propuesta:
-Título: [INTRODUCIR TÍTULO DE PROYECTO]
-Tipo de acción: [RIA / IA / CSA]
-Duración en meses: [INTRODUCIR MESES DE DURACIÓN]
-Presupuesto total: [INTRODUCIR PRESUPUESTO EN EUROS]
-Resumen de la propuesta: [INTRODUCIR ABSTRACT DE LA PROPUESTA]
-Objetivos principales: [INTRODUCIR LISTA DE OBJETIVOS]
-Metodología / Work plan: [INTRODUCIR PAQUETES DE TRABAJO Y ACTIVIDADES]
-Impacto esperado: [INTRODUCIR BENEFICIOS Y/O RESULTADOS ESPERADOS]
-Consorcio: [INTRODUCIR DESCRIPCIÓN DE CADA SOCIO Y SU ROL]
+Título: {{title}}
+Tipo de acción: {{actionType}}
+Duración en meses: {{duration}}
+Presupuesto total: {{budget}}
+Resumen de la propuesta: {{summary}}
+Objetivos principales: {{objectives}}
+Metodología / Work plan: {{methodology}}
+Impacto esperado: {{impact}}
+Consorcio: {{consortium}}
 
 
 Para la realización de la evaluación, tienes que basarte exclusivamente en los criterios y subpreguntas definidos en el formulario oficial de corrección de la Comisión Europea (Cada P-n, siendo n un número del 1 al 50, es una pregunta). Usa un tono profesional, objetivo y crítico. Tras responder a todas las preguntas, para cada criterio, asigna una puntuación de 0 a 5, siendo 0 si no cumple el criterio y 5 si cumple plenamente el criterio sin debilidades. Además, deberás hallar la puntuación global, que debe ser la suma exacta de las tres puntuaciones anteriores. Asegúrate de que las puntuaciones sean coherentes con los comentarios y entre sí. 
@@ -27,20 +27,22 @@ Para la realización de la evaluación, tienes que basarte exclusivamente en los
 Justifica cada puntuación brevemente de forma general haciendo referencia explícita a los aspectos solicitados en dicho formulario. Eso sí, no respondas individualmente a cada pregunta, devuelve únicamente un JSON con la siguiente estructura:
 
 {
-  "excelencia": {
+  "excellence": {
     "score": (0-5),
-    "comentario": "..."
+    "comment": "..."
   },
-  "impacto": {
+  "impact": {
     "score": (0-5),
-    "comentario": "..."
+    "comment": "..."
   },
-  "implementacion": {
+  "implementation": {
     "score": (0-5),
-    "comentario": "..."
+    "comment": "..."
   },
-  "total": (0-15),
-  "conclusion": "..."
+  "total": {
+    "score": (0-5),
+    "comment": "..."
+  }
 }
 
 Condiciones:

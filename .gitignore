@@ -35,3 +35,6 @@ yarn-error.log*
 sonarqube/extensions
 sonarqube/data
 sonarqube/logs
+
+# Environment variables
+.env

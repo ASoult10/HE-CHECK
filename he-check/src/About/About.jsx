@@ -5,7 +5,7 @@ export default function About() {
       <div className="info-section">
         <h1>Sobre el autor</h1>
         <p>HE-CHECK ha sido desarrollado por Alejandro Soult Toscano, un estudiante del Grado en Ingeniería Informática del Software, como parte de su Trabajo de Fin de Grado.</p>
-        <p>Durante su formación académica, el autor ha participado como alumno interno en actividades relacionadas con la preparación y elaboración de propuestas en el contexto de programas europeos de I+D+i. Esta experiencia ha permitido adquirir una comprensión práctica de los criterios de evaluación, así como de los principales retos a los que se enfrentan las entidades a la hora de diseñar propuestas competitivas.</p>
+        <p>Durante su formación académica, el autor ha participado como alumno interno en actividades relacionadas con la preparación y elaboración de propuestas en el contexto de programas europeos de I+D+i. Esta experiencia ha permitido adquirir una comprensión práctica de los principales retos a los que se enfrentan las entidades a la hora de diseñar propuestas competitivas, así como de los criterios de evaluación a considerar.</p>
         <p>El desarrollo de HE-CHECK surge precisamente de esta experiencia, con el objetivo de trasladar ese conocimiento a una herramienta accesible que facilite la evaluación preliminar de propuestas y ayude a mejorar su calidad antes de su entrega formal.</p>
       </div>
 

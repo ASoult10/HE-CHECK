@@ -13,13 +13,15 @@ export default function Info() {
         <h1>De propuesta a proyecto financiado</h1>
         <p>Las propuestas que superan el proceso de evaluación se convierten en proyectos financiados por la Unión Europea, con impacto real en distintos ámbitos científicos, tecnológicos e industriales.</p>
         <p>Estos proyectos suelen implicar consorcios internacionales y generan resultados que pueden traducirse en avances científicos, nuevos productos, mejoras sociales o soluciones a problemas globales.</p>
-        <p>A continuación, se muestran ejemplos reales de proyectos financiados en el marco de Horizonte Europa, obtenidos a partir de fuentes oficiales:</p>
+        <p>Estos proyectos tienen un impacto significativo en el desarrollo científico y tecnológico de la Unión Europea, además de cumplir con misiones y objetivos estratégicos.</p>
       </div>
 
       <div className="info-section">
         <h1>¿Por qué es importante una buena propuesta?</h1>
         <p>Dado el alto nivel de competencia, una propuesta mal estructurada o poco alineada con los criterios de evaluación tiene pocas probabilidades de ser financiada.</p>
         <p>Por ello, herramientas como HE-CHECK permiten anticipar posibles debilidades y mejorar la calidad de las propuestas antes de su presentación, aumentando así sus probabilidades de éxito.</p>
+        <p>Una buena propuesta no solo mejora las posibilidades de financiación, sino que también contribuye a la generación de proyectos de mayor impacto y relevancia para la sociedad.</p>
+        <p>En la siguiente sección, se muestran varios ejemplos de propuestas exitosas que, tras pasar el proceso de evaluación, se convirtieron en proyectos financiados.</p>
       </div>
 
       <div className="proposals-section">
