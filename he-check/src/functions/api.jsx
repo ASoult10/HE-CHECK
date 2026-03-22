@@ -1,6 +1,6 @@
 export default async function sendProposalDataToApi(formData) {
     try {
-        const response = await fetch(`${process.env.FUNCTION_URL}`, {
+        const response = await fetch(`${process.env.AZURE_FUNCTION_ENDPOINT}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
