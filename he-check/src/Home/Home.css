@@ -81,6 +81,14 @@
     border-radius: 8px;
 }
 
+.result {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .home textarea {
     width: 100%;
     min-height: 140px;
@@ -95,6 +103,8 @@
 .home button {
     background: var(--eu-blue-color);
     color: var(--white-color);
+    font: var(--plain-text);
+    margin: 10px 0;
     padding: 10px 16px;
     cursor: pointer;
     border: none;
@@ -103,4 +113,14 @@
 
 .loading {
     color: var(--eu-blue-color);
+}
+
+.input_error {
+    color: var(--error-red-color);
+    font-weight: bold;
+}
+
+.disclaimer {
+    color: var(--error-red-color);
+    font-weight: lighter;
 }

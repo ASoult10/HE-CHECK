@@ -5,10 +5,11 @@
   --eu-blue-color: #003399;
   --eu-yellow-color: #ffcc00;
   --white-color: #ffffff;
-  --shadow-grey-color: rgba(0, 0, 0, 0.03);
+  --shadow-grey-color: #00000008;
+  --error-red-color: #ff0000;
 
   --h1-heading: 40px 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
-  --h2-heading: 24px 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --h2-heading: 28px 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
   --h3-heading: 26px 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
   --plain-text: 20px 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
 }

@@ -12,9 +12,9 @@ export default function AppNav() {
                 </NavLink>
             </div>
             <div className="nav-otherlinks">
-                <NavLink to="/" className="nav-link"><h2>Home</h2></NavLink>
-                <NavLink to="/about" className="nav-link"><h2>About</h2></NavLink>
-                <NavLink to="/info" className="nav-link"><h2>Info</h2></NavLink>
+                <NavLink to="/" className="nav-link"><h3>Home</h3></NavLink>
+                <NavLink to="/about" className="nav-link"><h3>About</h3></NavLink>
+                <NavLink to="/info" className="nav-link"><h3>Info</h3></NavLink>
             </div>
         </nav>
     )

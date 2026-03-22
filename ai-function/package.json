@@ -1,0 +1,7 @@
+{
+  "name": "ai-function",
+  "version": "1.0.0",
+  "main": "function/index.js",
+  "type": "module",
+  "dependencies": {}
+}
