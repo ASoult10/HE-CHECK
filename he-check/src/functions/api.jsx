@@ -13,6 +13,7 @@ export default async function sendProposalDataToApi(formData) {
         return data;
 
     } catch (error) {
+        console.error('Api.jsx error - ', error);
         return { input_error: 'Error al enviar los datos. Por favor, inténtalo de nuevo más tarde.' };
     }
 };

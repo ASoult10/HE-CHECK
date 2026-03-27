@@ -62,11 +62,11 @@ export default async function (context, req) {
         }
 
     } catch (error) {
-        context.log('ERROR:', error)
+        context.log('index.js (Azure Functions) error - ', error)
         context.res = {
             status: 500,
             body: {
-                input_error: 'Error interno del servidor: ' + error.message
+                input_error: 'Error interno del servidor. Por favor, inténtalo de nuevo más tarde.',
             }
         }
     }

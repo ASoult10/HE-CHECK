@@ -47,7 +47,7 @@ export default function Home() {
             const res = await sendProposalDataToApi(form);
             setResult(res);
         } catch (err) {
-            console.error('Analyze error', err);
+            console.error('Home.jsx error - ', err);
         } finally {
             setLoading(false);
         }
