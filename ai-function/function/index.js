@@ -42,19 +42,26 @@ export default async function (context, req) {
             })
         })
 
+        if (!response.ok) {
+            const responseStatus = response.status
+            const errorText = await response.text()
+            context.res = {
+                status: responseStatus,
+                body: { input_error: 'Error interno del servidor. Por favor, inténtalo de nuevo más tarde.\nDetalles del error: ' + errorText }
+            }
+            return
+        }
+
         const aiData = await response.json()
 
-        const rawText =
-            aiData.candidates?.[0]?.content?.parts?.[0]?.text || ''
+        const rawText = aiData.candidates?.[0]?.content?.parts?.[0]?.text || ''
 
         const cleanText = rawText
             .replace(/```json/g, '')
             .replace(/```/g, '')
             .trim()
 
-        let parsed
-
-        parsed = JSON.parse(cleanText)
+        const parsed = JSON.parse(cleanText)
 
         context.res = {
             status: 200,
@@ -62,11 +69,10 @@ export default async function (context, req) {
         }
 
     } catch (error) {
-        context.log('index.js (Azure Functions) error - ', error)
         context.res = {
             status: 500,
             body: {
-                input_error: 'Error interno del servidor. Por favor, inténtalo de nuevo más tarde.',
+                input_error: 'Error interno del servidor. Por favor, inténtalo de nuevo más tarde.\nDetalles del error: ' + error.message,
             }
         }
     }

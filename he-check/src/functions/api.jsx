@@ -1,7 +1,7 @@
 export default async function sendProposalDataToApi(formData) {
-    const apiEndpoint = import.meta.env.VITE_AZURE_FUNCTION_ENDPOINT;
+    const endpoint = import.meta.env.VITE_AZURE_FUNCTION_ENDPOINT;
     try {
-        const response = await fetch(`${apiEndpoint}`, {
+        const response = await fetch(`${endpoint}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -9,12 +9,22 @@ export default async function sendProposalDataToApi(formData) {
             body: JSON.stringify(formData),
         });
 
+        if (!response.ok) {
+            const responseStatus = response.status;
+            const errorText = await response.text();
+            return { 
+                input_error: 'Error al enviar los datos. Por favor, inténtalo de nuevo más tarde.\nDetalles del error: ' + responseStatus + ' - ' + errorText 
+            };
+        }
+
         const data = await response.json();
 
         return data;
 
     } catch (error) {
         console.error('Api.jsx error - ', error);
-        return { input_error: 'Error al enviar los datos. Por favor, inténtalo de nuevo más tarde.' };
+        return { 
+            input_error: 'Error al enviar los datos. Por favor, inténtalo de nuevo más tarde.' 
+        };
     }
 };
