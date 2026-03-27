@@ -1,6 +1,7 @@
 export default async function sendProposalDataToApi(formData) {
+    const apiEndpoint = import.meta.env.VITE_AZURE_FUNCTION_ENDPOINT;
     try {
-        const response = await fetch(`${process.env.AZURE_FUNCTION_ENDPOINT}`, {
+        const response = await fetch(`${apiEndpoint}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
