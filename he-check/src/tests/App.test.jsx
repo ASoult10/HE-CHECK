@@ -1,4 +1,8 @@
 import { render, screen } from '@testing-library/react'
+jest.mock('../functions/api', () => ({
+  __esModule: true,
+  default: jest.fn().mockResolvedValue({})
+}))
 import App from '../App/App'
 
 describe('App', () => {
