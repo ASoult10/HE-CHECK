@@ -25,6 +25,8 @@ jobs:
 
       - name: Deploy a Azure Function
         uses: Azure/functions-action@v1
+        env:
+          VITE_AZURE_FUNCTION_ENDPOINT: ${{ secrets.VITE_AZURE_FUNCTION_ENDPOINT }}
         with:
           app-name: he-check-function
           package: ai-function
