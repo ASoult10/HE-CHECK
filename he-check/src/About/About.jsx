@@ -1,5 +1,21 @@
+import { useEffect } from 'react'
 import './About.css'
+import GitHubLogo from '../assets/GitHubLogo.png'
+import LinkedInLogo from '../assets/LinkedInLogo.png'
+
 export default function About() {
+  const handleScrollingToTop = () => {
+    const appNavLocation = document.querySelector('.app-nav')
+    if (appNavLocation) {
+      const top = appNavLocation.getBoundingClientRect().top
+      window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' })
+    }
+  }
+
+  useEffect(() => {
+    handleScrollingToTop()
+  }, [])
+
   return (
     <div className="about">
       <div className="info-section">
@@ -20,8 +36,14 @@ export default function About() {
       <div className="links-section">
         <h1>Enlaces de interés</h1>
         <p>Se puede consultar más información y acceder al código fuente del proyecto en los siguientes enlaces:</p>
-        <p><a href="https://github.com/ASoult10/HE-CHECK" target="_blank" rel="noopener noreferrer">Repositorio en GitHub</a></p>
-        <p><a href="https://www.linkedin.com/in/alejandro-soult-toscano" target="_blank" rel="noopener noreferrer">Perfil de LinkedIn</a></p>
+        <div className='link'>
+          <img src={GitHubLogo} alt="GitHub Logo" />
+          <p><a href="https://github.com/ASoult10/HE-CHECK" target="_blank" rel="noopener noreferrer">Repositorio en GitHub</a></p>
+        </div>
+        <div className='link'>
+          <img src={LinkedInLogo} alt="LinkedIn Logo" />
+          <p><a href="https://www.linkedin.com/in/alejandro-soult-toscano" target="_blank" rel="noopener noreferrer">Perfil de LinkedIn</a></p>
+        </div>
       </div>
     </div>
   )

@@ -1,6 +1,6 @@
-import './Home.css'
 import { useState, useEffect } from 'react'
 import sendProposalDataToApi from '../functions/api'
+import './Home.css'
 
 export default function Home() {
     const initialForm = {
@@ -20,6 +20,18 @@ export default function Home() {
     const [result, setResult] = useState('')
     const [loading, setLoading] = useState(false)
     const [copySuccess, setCopySuccess] = useState(false)
+
+    const handleScrollingToTop = () => {
+        const appNavLocation = document.querySelector('.app-nav')
+        if (appNavLocation) {
+            const top = appNavLocation.getBoundingClientRect().top
+            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' })
+        }
+    }
+
+    useEffect(() => {
+        handleScrollingToTop()
+    }, [])
 
     const handleScrollingToTool = () => {
         const el = document.querySelector('.tool')

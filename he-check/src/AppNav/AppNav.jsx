@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import './AppNav.css'
-import logo from '../assets/react.svg'
+import logo from '../assets/logo.svg'
 
 export default function AppNav() {
     return (
