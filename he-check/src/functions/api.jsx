@@ -11,7 +11,7 @@ export default async function sendProposalDataToApi(formData) {
 
         if (!response.ok) {
             const responseStatus = response.status;
-            const errorText = await response.text();
+            const errorText = response.statusText;
             return { 
                 input_error: 'Error al enviar los datos. Por favor, inténtalo de nuevo más tarde.\nDetalles del error: ' + responseStatus + ' - ' + errorText 
             };
