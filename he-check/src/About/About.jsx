@@ -1,5 +1,19 @@
+import { useEffect } from 'react'
 import './About.css'
+
 export default function About() {
+  const handleScrollingToTop = () => {
+    const appNavLocation = document.querySelector('.app-nav')
+    if (appNavLocation) {
+      const top = appNavLocation.getBoundingClientRect().top
+      window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' })
+    }
+  }
+
+  useEffect(() => {
+    handleScrollingToTop()
+  }, [])
+
   return (
     <div className="about">
       <div className="info-section">
