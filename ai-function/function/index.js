@@ -44,7 +44,7 @@ export default async function (context, req) {
 
         if (!response.ok) {
             const responseStatus = response.status
-            const errorText = await response.text()
+            const errorText = response.statusText
             context.res = {
                 status: responseStatus,
                 body: { input_error: 'Error interno del servidor. Por favor, inténtalo de nuevo más tarde.\nDetalles del error: ' + errorText }
