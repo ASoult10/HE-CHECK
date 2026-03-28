@@ -3,51 +3,33 @@
     background: var(--eu-yellow-color);
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 12px 16px;
-    margin-top: auto;
+    justify-content: flex-start;
+    align-items: left;
+    padding: 0 5px;
     position: static;
 }
 
-.footer .nav-logo {
-    width: 40%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer .logo {
+.footer p {
+    font-size: 15px;
     color: var(--eu-blue-color);
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
 }
 
-.footer .logo-img {
-    width: 80px;
-}
-
-.footer .nav-otherlinks {
-    width: 60%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-}
-
-.footer .nav-link {
+.footer h3 {
     color: var(--eu-blue-color);
-    text-decoration: none;
-    padding: 2px 8px;
 }
 
-.footer .nav-link:hover {
-    color: var(--black-color);
-    background: var(--shadow-grey-color);
+.texts {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+}
+
+.email {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
