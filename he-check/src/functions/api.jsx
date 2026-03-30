@@ -12,8 +12,8 @@ export default async function sendProposalDataToApi(formData) {
         if (!response.ok) {
             const responseStatus = response.status;
             const errorText = response.statusText;
-            return { 
-                input_error: 'Error al enviar los datos. Por favor, inténtalo de nuevo más tarde.\nDetalles del error: ' + responseStatus + ' - ' + errorText 
+            return {
+                input_error: 'Error al enviar los datos. Por favor, inténtalo de nuevo más tarde.\nDetalles del error: ' + responseStatus + ' - ' + errorText
             };
         }
 
@@ -23,8 +23,8 @@ export default async function sendProposalDataToApi(formData) {
 
     } catch (error) {
         console.error('Api.jsx error - ', error);
-        return { 
-            input_error: 'Error al enviar los datos. Por favor, inténtalo de nuevo más tarde.' 
+        return {
+            input_error: 'Error al enviar los datos. Por favor, inténtalo de nuevo más tarde.'
         };
     }
 };

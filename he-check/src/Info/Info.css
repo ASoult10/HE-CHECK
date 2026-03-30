@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-.info-section {
+.info-content-section {
     width: 80%;
     background: var(--eu-yellow-color);
     display: flex;
@@ -18,15 +18,28 @@
     border-radius: 8px;
 }
 
-.proposals-section {
+.info-links-section {
     width: 80%;
     background: var(--white-color);
     color: var(--black-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin: 40px 0;
     padding: 20px;
     border-radius: 8px;
+}
+
+.info-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.info-link-img {
+    width: 100px;
+    height: auto;
+    margin-right: 8px;
 }
