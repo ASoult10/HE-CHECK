@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import './Info.css'
 import HorizonEuropeLogo from '../assets/HorizonEuropeLogo.jpg'
-import HorizonteeuropaEspañaLogo from '../assets/HorizonteeuropaEspañaLogo.jpg'
+import HorizonteEuropaEspañaLogo from '../assets/HorizonteEuropaEspañaLogo.jpg'
 import EUFundingPortalLogo from '../assets/EUFundingPortalLogo.jpg'
 
 export default function Info() {
@@ -49,7 +49,7 @@ export default function Info() {
           <p><a href="https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en" target="_blank" rel="noopener noreferrer">Explicación del programa Horizonte Europa</a></p>
         </div>
         <div className='info-link'>
-          <img className="info-link-img" src={HorizonteeuropaEspañaLogo} alt="Horizon Europe Logo" />
+          <img className="info-link-img" src={HorizonteEuropaEspañaLogo} alt="Horizon Europe Logo" />
           <p><a href="https://www.horizonteeuropa.es/" target="_blank" rel="noopener noreferrer">Página oficial de Horizonte Europa en España</a></p>
         </div>
         <div className='info-link'>
