@@ -8,6 +8,8 @@
     "build": "vite build",
     "test": "jest",
     "test:watch": "jest --watch",
+    "e2e": "cypress open --config-file config/cypress.config.js",
+    "e2e:run": "cypress run --config-file config/cypress.config.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -26,6 +28,7 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.0",
     "babel-jest": "^30.3.0",
+    "cypress": "^15.13.0",
     "eslint": "^9.39.4",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.5.2",
