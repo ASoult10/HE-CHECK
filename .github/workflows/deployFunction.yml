@@ -8,7 +8,7 @@ on:
       - 'ai-function/**'
 
 jobs:
-  deploy_frontend:
+  deploy_function:
     name: Desplegar Función en Azure Function
     runs-on: ubuntu-latest
     timeout-minutes: 15
