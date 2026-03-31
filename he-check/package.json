@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "test": "jest",
-    "test:watch": "jest --watch",
+    "test": "jest --config ./config/jest.config.cjs",
+    "test:watch": "jest --config ./config/jest.config.cjs --watch",
     "e2e": "cypress open --config-file config/cypress.config.js",
     "e2e:run": "cypress run --config-file config/cypress.config.js",
     "lint": "eslint .",
