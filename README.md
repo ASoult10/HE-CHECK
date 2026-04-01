@@ -2,13 +2,17 @@
 
 ## Descripción
 
-HE-CHECK es una herramienta diseñada para apoyar la redacción y evaluación preliminar de propuestas de proyectos. A partir de la información introducida por el usuario, la aplicación envía los datos a un backend serverless que se encarga de procesarlos mediante un modelo de IA y devolver un análisis detallado.
+HE-CHECK es una herramienta diseñada para la evaluación preliminar de propuestas de proyectos del programa Horizonte Europa. A partir de la información introducida por el usuario, se procesan los datos mediante un modelo de IA que devuelve un análisis detallado con una predicción de la evaluación que tendría en el programa.
 
 La aplicación sigue una arquitectura desacoplada basada en:
 
 - Frontend en React
 - Backend serverless con Azure Functions
-- Integración con API de IA (Gemini)
+- Integración con API de IA
+
+---
+
+![HE-CHECK Logo](docs/images/logo.jpg)
 
 ---
 
@@ -26,7 +30,7 @@ La aplicación sigue una arquitectura desacoplada basada en:
 git clone <URL_DEL_REPOSITORIO>
 
 # Acceder al proyecto
-cd HE-CHECK
+cd he-check
 
 # Instalar dependencias
 npm install
@@ -39,7 +43,7 @@ npm run dev
 
 ```bash
 # Acceder al proyecto
-cd HE-CHECK
+cd he-check
 
 # Ejecutar tests unitarios y de integración
 npm test
@@ -47,6 +51,16 @@ npm test
 # Ejecutar tests end-to-end
 npm run e2e:run
 ```
+
+---
+
+## Nota - Alcance del repositorio y consideraciones de despliegue
+
+En este repositorio se incluyen exclusivamente los códigos fuente del frontend y del backend. Las URLs de despliegue, así como las claves de API y demás credenciales necesarias para la integración con servicios de IA, se gestionan mediante variables de entorno que no se publican en el repositorio por motivos de seguridad y de carácter académico del proyecto.
+
+En consecuencia, cualquier persona que desee desplegar el backend, el frontend e integrar los servicios de IA deberá encargarse de la creación y configuración de los recursos necesarios en su propio entorno.
+
+Para ampliar esta información, consulte la documentación del proyecto incluida en este repositorio.
 
 ---
 

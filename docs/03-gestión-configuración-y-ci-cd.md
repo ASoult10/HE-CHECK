@@ -2,7 +2,7 @@
 
 ## Gestión de la configuración y CI/CD
 
-![HE-CHECK Logo](../he-check/public/favicon.jpg)
+![HE-CHECK Logo](images/logo.jpg)
 
 ---
 
@@ -34,7 +34,7 @@ Para la organización y seguimiento del trabajo, se utiliza un **GitHub Project*
   - `DOC` → Tareas de documentación
   - `FIRST TASK` → Tarea inicial del desarrollo
   - `OTHER` → Tareas no incluidas en otras categorías
-  - `TEST` → Tareas de testing (formal e informal)
+  - `TEST` → Tareas de testing
 
 - **Clasificación por prioridad:**
   - `priority:high` → Alta prioridad
@@ -76,11 +76,11 @@ El proceso de Integración Continua está definido en el workflow **`testingEjec
 
 Los pasos del job principal son:
 
-- **Checkout repository**
+- **Descargar Repositorio**
   - Descarga el código del repositorio.
   - Acción: `actions/checkout@v4`
 
-- **Setup Node**
+- **Configurar Node**
   - Configura el entorno de Node.js (versión 20).
   - Habilita caché de dependencias (`npm`).
   - Acción: `actions/setup-node@v4`
@@ -92,9 +92,11 @@ Los pasos del job principal son:
 - **Ejecutar tests**
   - Lanza los tests definidos en el proyecto (`npm test`).
 
-- **Build frontend**
+- **Construir Build de Frontend**
   - Genera la versión de producción del frontend (`npm run build`).
   - Permite validar que la aplicación compila correctamente.
+
+![Diagrama de workflow de CI: Ejecución de tests](./diagrams/DiagramaCITests.JPG)
 
 ## 4. Despliegue Continuo (CD): Despliegue de Aplicación Frontend
 
@@ -110,10 +112,10 @@ El despliegue del frontend está definido en el workflow **`deployApp.yml`**. Su
 
 Los pasos del job principal son:
 
-- **Checkout repository**
+- **Descargar Repositorio**
   - Descarga el código fuente.
 
-- **Setup Node**
+- **Configurar Node**
   - Configura Node.js (versión 20).
 
 - **Deploy a Azure Static Web App**
@@ -137,6 +139,8 @@ Otras características relevantes son:
   - `GITHUB_TOKEN`
   - Variables de entorno como endpoint del backend
 
+![Diagrama de workflow de CD: Despliegue Frontend](./diagrams/DiagramaCDFrontend.JPG)
+
 ## 5. Despliegue Continuo (CD): Despliegue de Aplicación Backend
 
 El despliegue del backend está definido en el workflow **`deployFunction.yml`**. Sus elementos principales son:
@@ -149,10 +153,10 @@ El despliegue del backend está definido en el workflow **`deployFunction.yml`**
 
 Los pasos del job principal son:
 
-- **Checkout repository**
+- **Descargar Repositorio**
   - Descarga el código del repositorio.
 
-- **Setup Node**
+- **Configurar Node**
   - Configura Node.js (versión 20).
 
 - **Deploy a Azure Function**
@@ -167,6 +171,8 @@ Otras características relevantes son:
 
   **Secrets utilizados (descritos más adelante):**
   - `AZURE_FUNCTIONS_PUBLISH_PROFILE`
+
+![Diagrama de workflow de CD: Despliegue Backend](./diagrams/DiagramaCDBackend.JPG)
 
 ---
 

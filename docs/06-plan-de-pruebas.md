@@ -2,7 +2,7 @@
 
 ## Plan de pruebas
 
-![HE-CHECK Logo](../he-check/public/favicon.jpg)
+![HE-CHECK Logo](images/logo.jpg)
 
 ---
 
@@ -41,6 +41,8 @@ Se han clasificado las pruebas por varios criterios:
 
 - **Pruebas end-to-end (E2E)**: Simulan el comportamiento real del usuario, recorriendo todo el flujo desde la introducción de datos hasta la obtención de resultados.
 
+![Diagrama de pruebas por tipo](./diagrams/DiagramaPruebas.JPG)
+
 ### 2.2 Clasificación por módulo
 
 - **Home.jsx**
@@ -55,7 +57,9 @@ Se han clasificado las pruebas por varios criterios:
   - Pruebas unitarias
 
 ## 3. Cobertura de las pruebas sobre la aplicación
-TODO
+La cobertura de pruebas alcanzada sobre la aplicación es del X%. *<- TODO: Poner la cobertura*
+
+Este porcentaje refleja el grado en el que el código fuente ha sido ejecutado durante la batería de pruebas, incluyendo componentes principales, flujos de interacción y comunicación con servicios externos. La cobertura obtenida se considera adecuada para garantizar la estabilidad del sistema, especialmente en los módulos críticos como el componente Home, donde se concentra la mayor lógica de negocio.
 
 ## 4. Lista de pruebas implementadas
 
@@ -65,7 +69,7 @@ TODO
 - **it('renderiza las secciones de información y el formulario de propuesta')**
   - **SUT**: Componente Home
   - **Entradas**: Ninguna
-  - **Salida esperada**: Se renderizan correctamente las secciones principales (“¿Qué es HE-CHECK?”, “¿Cómo funciona?”), el formulario y el botón “Analizar”
+  - **Salida esperada**: Se renderizan correctamente las secciones principales de información (“¿Qué es HE-CHECK?”, “¿Cómo funciona?”), el formulario y el botón “Analizar”
 
 - **it('envía los datos al pulsar el botón de "Analizar" y muestra la respuesta mockeada de la API')**
   - **SUT**: Componente Home
@@ -76,7 +80,7 @@ TODO
 - **it('renderiza las secciones de información del autor y del framework')**
   - **SUT**: Componente About
   - **Entradas**: Ninguna
-  - **Salida esperada**: Se muestran las secciones “Sobre el autor”, “Relación con el framework FRONDA” y “Enlaces de interés”
+  - **Salida esperada**: Se renderizan correctamente las secciones principales de información (“Sobre el autor”, “Relación con el framework FRONDA” y “Enlaces de interés”)
 
 - **it('renderiza los enlaces externos con información del repositorio y el perfil del autor')**
   - **SUT**: Componente About
@@ -87,7 +91,7 @@ TODO
 - **it('renderiza las secciones de información de Horizonte Europa')**
   - **SUT**: Componente Info
   - **Entradas**: Ninguna
-  - **Salida esperada**: Se renderizan correctamente todas las secciones informativas del programa
+  - **Salida esperada**: Se renderizan correctamente las secciones principales de información ("¿Qué es Horizonte Europa?", "De propuesta a proyecto financiado", "¿Por qué es importante una buena propuesta?" y "Más información")
 
 - **it('renderiza los enlaces externos con información adicional del programa')**
   - **SUT**: Componente Info
@@ -119,7 +123,7 @@ TODO
     - Se lanza la petición al endpoint de análisis
     - Se muestra un estado de carga (“Analizando documento...”)
     - Se recibe una respuesta exitosa (HTTP 200)
-    - Se renderizan los resultados (Excelencia, Impacto, Implementación y Conclusiones)
+    - Se renderizan los apartados de los resultados ("Excelencia", "Impacto", "Implementación" y "Conclusiones")
     - Se muestran acciones adicionales como “Volver” y “Copiar (JSON)”
 
 ---

@@ -2,7 +2,7 @@
 
 ## Descripción de la aplicación
 
-![HE-CHECK Logo](../he-check/public/favicon.jpg)
+![HE-CHECK Logo](images/logo.jpg)
 
 ---
 
@@ -112,6 +112,8 @@ El frontend de HE-CHECK está desarrollado como una **Single Page Application (S
     - Procesamiento de la respuesta
   - Aunque actualmente solo contiene una función, actúa como **punto de extensión** para futuras integraciones con APIs adicionales.
 
+![Diagrama de Componentes](./diagrams/DiagramaComponentes.JPG)
+
 ---
 
 ### 1.2 Estilos y diseño
@@ -210,12 +212,7 @@ Actualmente, el sistema expone un único endpoint:
 
 - **Método**: POST
 
----
-
-### 3.1 Body de la petición
-
-El cliente debe enviar un JSON con los datos de la propuesta:
-
+- **Body de la petición**: El cliente debe enviar un JSON con los datos de la propuesta.
 ```
 {
   "topic": "",
@@ -231,10 +228,7 @@ El cliente debe enviar un JSON con los datos de la propuesta:
 }
 ```
 
----
-
-### 3.2 Respuesta exitosa (200)
-
+- **Respuesta exitosa (200)**:
 ```
 {
   "excellence": {
@@ -256,12 +250,7 @@ El cliente debe enviar un JSON con los datos de la propuesta:
 }
 ```
 
----
-
-### 3.3 Respuesta de error
-
-- Código: `500` (o código devuelto por la API externa)
-
+- **Respuesta de error**: Código: `500` o código devuelto por la API externa
 ```
 {
   "input_error": "..."
