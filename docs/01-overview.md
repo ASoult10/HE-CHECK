@@ -2,7 +2,7 @@
 
 ## Overview
 
-![HE-CHECK Logo](../he-check/public/favicon.jpg)
+![HE-CHECK Logo](./images/logo.jpg)
 
 ---
 

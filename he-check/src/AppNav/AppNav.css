@@ -31,6 +31,7 @@
 
 .app-nav .logo-img {
     width: 80px;
+    height: auto;
 }
 
 .app-nav .nav-otherlinks {

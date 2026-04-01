@@ -15,10 +15,10 @@ jobs:
 
     steps:
 
-      - name: Checkout repository
+      - name: Descargar Repositorio
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Configurar Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
