@@ -2,7 +2,7 @@
 
 ## Arquitectura e Infraestructura
 
-![HE-CHECK Logo](../he-check/public/favicon.jpg)
+![HE-CHECK Logo](images/logo.jpg)
 
 ---
 
@@ -22,19 +22,21 @@
 
 ## 1. Descripción de la arquitectura
 
-La aplicación HE-CHECK sigue una arquitectura modular basada en la separación entre frontend, backend y servicios externos. Los principales componentes arquitectónicos son:
+La aplicación HE-CHECK sigue una arquitectura modular basada en la separación en capas. Los principales componentes arquitectónicos son:
 
-- **Frontend** *(ubicación: /he-check)*: Aplicación web SPA desarrollada con React y Vite. Se encarga de la interacción con el usuario, recogida de datos de la propuesta y visualización de resultados.
+- **Frontend** *(ubicación: [/he-check](../he-check/))*: Aplicación web SPA desarrollada con React y Vite. Se encarga de la interacción con el usuario, recogida de datos de la propuesta y visualización de resultados.
 
-- **Backend** *(ubicación: /ai-function)*: Implementado mediante Azure Functions. Actúa como intermediario entre el frontend y la API de Inteligencia Artificial, gestionando la construcción del prompt (mediante un sistema basado en una plantilla reutilizable en el que se inyecta los datos de la propuesta introducidos por el susuario) y el procesamiento de la respuesta y errores.
+- **Backend** *(ubicación: [/ai-function](../ai-function/))*: Implementado mediante Azure Functions. Actúa como intermediario entre el frontend y la API externa de Inteligencia Artificial (IA), gestionando la construcción del prompt (mediante un sistema basado en una plantilla reutilizable en el que se inyecta los datos de la propuesta introducidos por el susuario) y el procesamiento de la respuesta y errores.
 
-- **Integración con API de Inteligencia Artificial (Gemini)**: Servicio externo encargado de generar la evaluación de la propuesta a partir del prompt construido en el backend.
+- **Integración con API de Inteligencia Artificial (IA)**: Servicio externo encargado de generar la evaluación de la propuesta a partir del prompt construido en el backend.
 
 Esta arquitectura permite una clara separación de responsabilidades, alta cohesión y bajo acoplamiento. De esta forma, se facilita la mantenibilidad, escalabilidad y sustitución de componentes.
 
+![Diagrama de Arquitectura](./diagrams/DiagramaArquitectura.JPG)
+
 ## 2. Descripción de la infraestructura
 
-Todos los recursos de la aplicación se encuentran desplegados en la nube dentro de un **grupo de recursos de Azure**, lo que permite gestionarlos de forma conjunta y organizada.
+Todos los recursos propios de la aplicación se encuentran desplegados en la nube dentro de un **grupo de recursos de Azure**, lo que permite gestionarlos de forma conjunta y organizada.
 
 Los principales recursos utilizados son:
 
@@ -46,11 +48,17 @@ Los principales recursos utilizados son:
 
 - **App Service Plan**: Plan de consumo utilizado por Azure Functions. El plan seleccionado es el `Y1`, el cual se trata de la opción más económica (modelo serverless), ya que solo consume recursos cuando se ejecuta código, siendo suficiente para el alcance de este proyecto.
 
+Además de los mencionados, hay que destacar la presencia de recursos externos con la **infraestructura del modelo de IA (Gemini)**, el cual se comunicará con la aplicación mediante el uso de su API.
+
 Esta infraestructura permite un despliegue ligero, escalable y de bajo coste, adecuado para un entorno académico.
+
+![Diagrama de Infraestructura](./diagrams/DiagramaInfraestructura.JPG)
 
 ## 3. Flujo de funcionamiento de la aplicación
 
 El funcionamiento de la aplicación sigue un flujo sencillo basado en la comunicación entre componentes:
+
+![Diagrama de Flujo de Aplicación](./diagrams/DiagramaFlujo.JPG)
 
 1. El usuario introduce los datos de la propuesta en el **frontend**.
 2. El frontend envía una petición HTTP al **backend (Azure Function)**.
@@ -79,11 +87,13 @@ Se han definido tres archivos principales:
 - **staticWebApp.bicep**: Es el encargado de definir el recurso de Azure Static Web Apps para el despliegue del frontend.
 
 - **main.bicep**: Se trata del archivo orquestador que invoca a los otros dos, recibiendo los siguientes parámetros:
-    - Ubicación (location)
+    - Ubicación (Grupo de Recursos)
     - Nombre de la Static Web App
     - Nombre de la Function
     - SKU de la Static Web App
     - SKU de la Function
+
+![Diagrama de IaC](./diagrams/DiagramaBicep.JPG)
 
 El uso de Bicep permite que la infraestructura sea completamente portable y reutilizable. Cualquier usuario con una cuenta de Azure puede desplegar todos los recursos ejecutando un único comando, adaptando únicamente los parámetros necesarios. Además, mediante la configuración de variables de entorno y secretos, es posible cambiar de plataforma de despliegue, o incluso cambiar la API de IA utilizada.
 
