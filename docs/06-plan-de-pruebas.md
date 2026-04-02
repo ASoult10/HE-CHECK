@@ -57,9 +57,18 @@ Se han clasificado las pruebas por varios criterios:
   - Pruebas unitarias
 
 ## 3. Cobertura de las pruebas sobre la aplicación
-La cobertura de pruebas alcanzada sobre la aplicación es del X%. *<- TODO: Poner la cobertura*
+La cobertura global obtenida en la ejecución de pruebas es la siguiente, dividida en los siguientes criterios:
+- Statements: *73.03%*
+- Branches: *72.54%*
+- Functions: *78.26%*
+- Lines: *74.07%*
 
-Este porcentaje refleja el grado en el que el código fuente ha sido ejecutado durante la batería de pruebas, incluyendo componentes principales, flujos de interacción y comunicación con servicios externos. La cobertura obtenida se considera adecuada para garantizar la estabilidad del sistema, especialmente en los módulos críticos como el componente Home, donde se concentra la mayor lógica de negocio.
+Para reportar una cifra única de cobertura global, se tomará como referencia la cobertura por líneas:
+- **Cobertura global (Lines): 74.07%.**
+
+La cobertura alcanzada puede considerarse adecuada para el alcance y la naturaleza del proyecto, especialmente teniendo en cuenta que los módulos críticos, como el componente Home y la función de interacción con la API, están correctamente validados mediante pruebas tanto unitarias como de integración y end-to-end.
+
+El porcentaje no cubierto corresponde principalmente a secciones de código de menor relevancia, como partes estáticas de la interfaz, casos poco probables o manejo de errores internos y de la API. Por tanto, el nivel de cobertura obtenido garantiza un grado razonable de fiabilidad y estabilidad del sistema, asegurando que los flujos principales de uso han sido correctamente verificados.
 
 ## 4. Lista de pruebas implementadas
 
